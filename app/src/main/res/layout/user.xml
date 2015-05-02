@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textSize="30.0dip" android:id="@+id/donateButton" android:padding="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Donate" android:onClick="donateMenu" />
+    <Button android:textSize="30.0dip" android:id="@+id/receiveButton" android:padding="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Receive" android:layout_below="@id/donateButton" android:onClick="receiveMenu" />
+</RelativeLayout>

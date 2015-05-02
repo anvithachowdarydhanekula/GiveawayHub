@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@+id/mainView" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:layout_gravity="center_horizontal" android:id="@+id/heading" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <SearchView android:id="@+id/searchInput" android:focusable="false" android:focusableInTouchMode="false" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ExpandableListView android:id="@+id/expandableListView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:indicatorLeft="?android:expandableListPreferredItemIndicatorLeft" android:divider="#ffff2d34" android:dividerHeight="0.5dip" />
+        <Button android:id="@+id/newItem" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/newItem" />
+        <Button android:id="@+id/otherItems" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/otherItems" />
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/donationView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/itemName" />
+            <EditText android:id="@id/nameInput" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/itemLocation" />
+            <EditText android:id="@id/locationInput" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:id="@+id/statusText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/statusText" />
+            <RadioGroup android:orientation="horizontal" android:id="@+id/itemStatus" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:textAppearance="@style/TextAppearance.AppCompat.Large" android:id="@+id/statusNew" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/statusNew" />
+                <RadioButton android:textAppearance="@style/TextAppearance.AppCompat.Large" android:id="@+id/statusUsed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/statusUsed" />
+            </RadioGroup>
+            <Button android:gravity="center" android:id="@id/takePicture" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/takePicture" />
+            <ImageView android:id="@id/imageView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <Button android:id="@id/confirmDonation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/confirmDonation" />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/resultsView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:layout_gravity="center_horizontal" android:id="@+id/resultsHeading" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:id="@+id/resultsCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/resultsHeading" android:layout_alignParentLeft="true" />
+            <TextView android:id="@+id/filters" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/filters" android:layout_below="@id/resultsCount" android:layout_alignParentLeft="true" />
+            <Button android:id="@+id/clearResults" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/clearResults" android:layout_below="@id/resultsCount" android:layout_alignParentRight="true" />
+            <Button android:id="@+id/recent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recent" android:layout_below="@id/clearResults" android:layout_alignParentLeft="true" />
+            <Button android:id="@+id/distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/distance" android:layout_toRightOf="@id/recent" android:layout_below="@id/clearResults" />
+            <Button android:id="@+id/newProducts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/newProducts" android:layout_below="@id/recent" />
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ListView android:id="@+id/resultsListView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

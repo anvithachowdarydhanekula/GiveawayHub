@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/itemName" />
+    <EditText android:id="@+id/nameInput" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/itemLocation" />
+    <EditText android:id="@+id/locationInput" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <Button android:gravity="center" android:id="@+id/takePicture" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/takePicture" />
+    <ImageView android:id="@+id/imageView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <Button android:layout_gravity="center_horizontal" android:id="@+id/confirmDonation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/confirmDonation" />
+</LinearLayout>
